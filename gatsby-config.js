@@ -15,6 +15,26 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data/companies`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data/research`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-json`,
+      /*       options: {
+        typeName: `Tiddlers`, // a fixed string
+      }, */
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
