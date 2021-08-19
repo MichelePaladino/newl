@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 import { SetRecoilState, useRecoilState, useRecoilValue } from "recoil"
 import Table from "rc-table"
+import { DocumentDownloadIcon } from "@heroicons/react/outline"
 
 import { researchListState } from "../recoil/atoms"
 import { filteredResearchListState } from "../recoil/selectors"
@@ -57,6 +58,15 @@ const columns = [
     dataIndex: "author",
     key: "author",
     width: 100,
+  },
+  {
+    title: "Export",
+    dataIndex: "export",
+    key: "export",
+    width: 20,
+    render(val, obj, i) {
+      return <DocumentDownloadIcon width={"24px"} />
+    },
   },
 ]
 
