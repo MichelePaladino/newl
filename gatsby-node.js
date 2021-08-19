@@ -12,8 +12,6 @@ const path = require(`path`)
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const daily = path.resolve(`./src/templates/daily.js`)
-  const aboutTemplate = path.resolve(`./src/templates/about-template.js`)
   const companyTemplate = path.resolve(`./src/templates/company.js`)
   const researchTemplate = path.resolve(`./src/templates/research.js`)
   const companiesQuery = await graphql(
